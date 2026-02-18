@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moreau & Associés — Cabinet d'Avocats</title>
+<link rel="stylesheet" href="mod.css">
+<link rel="shortcut icon" href="img/logobleu.png" type="image/x-icon">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:wght@300;400;500&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="index.html" class="logo">
+  <img class="logo-default" src="img/logo.png" alt="Logo Moreau & Associés">
+  <img class="logo-scrolled" src="img/logobleublanc.png" alt="Logo Moreau & Associés">
+</a>
+  <ul class="nav-links">
+    <li><a href="#domaines">Expertise</a></li>
+    <li><a href="#about">Cabinet</a></li>
+    <li><a href="#equipe">Équipe</a></li>
+    <li><a href="#temoignages">Références</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Consultation</a>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 5C11.4477 5 11 5.44772 11 6C11 6.55228 11.4477 7 12 7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H12Z" fill="currentColor" />
+      <path d="M7 12C7 11.4477 7.44772 11 8 11H16C16.5523 11 17 11.4477 17 12C17 12.5523 16.5523 13 16 13H8C7.44772 13 7 12.5523 7 12Z" fill="currentColor" />
+      <path d="M3 18C3 17.4477 3.44772 17 4 17H12C12.5523 17 13 17.4477 13 18C13 18.5523 12.5523 19 12 19H4C3.44772 19 3 18.5523 3 18Z" fill="currentColor" />
+    </svg>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu" style="display:none">
+  <button class="mobile-menu-close" id="mobileClose" aria-label="Fermer">&#x2715;</button>
+  <nav class="mobile-nav">
+    <ul>
+      <li><a href="#domaines" class="mobile-link">Expertise</a></li>
+      <li><a href="#about" class="mobile-link">Cabinet</a></li>
+      <li><a href="#equipe" class="mobile-link">Équipe</a></li>
+      <li><a href="#temoignages" class="mobile-link">Références</a></li>
+    </ul>
+    <a href="#contact" class="mobile-cta">Consultation</a>
+  </nav>
+</div>
+<div class="mobile-overlay" id="mobileOverlay" style="display:none"></div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-left">
+    <p class="hero-year">Fondé en 1987 — Paris, France</p>
+    <h1 class="hero-title">
+      L'Excellence<br>
+      <em>Juridique</em><br>
+      À votre service
+    </h1>
+    <p class="hero-desc">
+      Un cabinet d'avocats d'affaires de premier rang, dédié à la protection de vos intérêts avec rigueur, confidentialité et expertise reconnue.
+    </p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-primary">Prendre rendez-vous</a>
+      <a href="#domaines" class="btn-secondary">Nos domaines</a>
+    </div>
+    <div class="scroll-indicator">Défiler</div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-right-inner">
+      <div class="hero-stat">
+        <div class="stat-num">35+</div>
+        <div class="stat-label">Années d'expérience</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-num">2 400</div>
+        <div class="stat-label">Dossiers traités</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-num">98%</div>
+        <div class="stat-label">Taux de satisfaction client</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOMAINES -->
+<section id="domaines">
+  <div class="equipe-header reveal"> <p class="section-label" >Expertise</p>
+    <h2 class="section-title">Nos domaines<br><em>d'intervention</em></h2>
+  </div>
+  <div class="domaines-grid">
+    <div class="domaine-card reveal">
+      <div class="domaine-num">01</div>
+      <h3 class="domaine-title">Droit des Affaires</h3>
+      <p class="domaine-desc">Conseil et assistance dans toutes les opérations commerciales : fusions-acquisitions, contrats, restructurations et due diligence.</p>
+      <a href="#" class="domaine-link">En savoir plus →</a>
+    </div>
+    <div class="domaine-card reveal">
+      <div class="domaine-num">02</div>
+      <h3 class="domaine-title">Droit Fiscal</h3>
+      <p class="domaine-desc">Optimisation fiscale, contentieux fiscal, TVA, fiscalité internationale et accompagnement lors de contrôles fiscaux.</p>
+      <a href="#" class="domaine-link">En savoir plus →</a>
+    </div>
+    <div class="domaine-card reveal">
+      <div class="domaine-num">03</div>
+      <h3 class="domaine-title">Droit Social</h3>
+      <p class="domaine-desc">Relations individuelles et collectives de travail, restructurations sociales, négociations et contentieux prud'homal.</p>
+      <a href="#" class="domaine-link">En savoir plus →</a>
+    </div>
+    <div class="domaine-card reveal">
+      <div class="domaine-num">04</div>
+      <h3 class="domaine-title">Droit Pénal des Affaires</h3>
+      <p class="domaine-desc">Défense et conseils dans les affaires de fraude, corruption, abus de biens sociaux et contentieux financiers complexes.</p>
+      <a href="#" class="domaine-link">En savoir plus →</a>
+    </div>
+    <div class="domaine-card reveal">
+      <div class="domaine-num">05</div>
+      <h3 class="domaine-title">Propriété Intellectuelle</h3>
+      <p class="domaine-desc">Protection des marques, brevets, droits d'auteur, noms de domaine et accompagnement en cas de contrefaçon.</p>
+      <a href="#" class="domaine-link">En savoir plus →</a>
+    </div>
+    <div class="domaine-card reveal">
+      <div class="domaine-num">06</div>
+      <h3 class="domaine-title">Droit Immobilier</h3>
+      <p class="domaine-desc">Transactions immobilières, baux commerciaux, promotion immobilière, contentieux et montages patrimoniaux complexes.</p>
+      <a href="#" class="domaine-link">En savoir plus →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-image">
+    <div class="about-image-inner">
+      <span>M</span>
+      <div class="about-badge">
+        <span class="badge-num">35</span>
+        <span class="badge-txt">ans d'excellence</span>
+      </div>
+    </div>
+  </div>
+  <div class="about-content">
+    <p class="section-label">Notre cabinet</p>
+    <h2 class="section-title">Un engagement<br><em>sans compromis</em></h2>
+    <p class="about-text">
+      Fondé en 1987, Moreau & Associés s'est imposé comme l'un des cabinets de référence dans le paysage juridique français. Notre approche conjugue expertise technique pointue et compréhension profonde des enjeux économiques.
+    </p>
+    <p class="about-text">
+      Nous accompagnons aussi bien les grandes entreprises du CAC 40 que les ETI en pleine croissance, les fonds d'investissement et les entrepreneurs dans leurs projets les plus ambitieux.
+    </p>
+    <div class="about-values">
+      <div class="value-item">
+        <div class="value-icon">⚖</div>
+        <div>
+          <div class="value-label">Intégrité</div>
+          <div class="value-desc">Un engagement éthique à chaque étape</div>
+        </div>
+      </div>
+      <div class="value-item">
+        <div class="value-icon">◈</div>
+        <div>
+          <div class="value-label">Expertise</div>
+          <div class="value-desc">Des avocats reconnus dans leurs domaines</div>
+        </div>
+      </div>
+      <div class="value-item">
+        <div class="value-icon">◎</div>
+        <div>
+          <div class="value-label">Réactivité</div>
+          <div class="value-desc">Disponibles dans les moments critiques</div>
+        </div>
+      </div>
+      <div class="value-item">
+        <div class="value-icon">◇</div>
+        <div>
+          <div class="value-label">Confidentialité</div>
+          <div class="value-desc">Secret professionnel absolu</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ÉQUIPE -->
+<section id="equipe">
+  <div class="equipe-header reveal">
+    <p class="section-label">Notre équipe</p>
+    <h2 class="section-title">Des avocats<br><em>d'exception</em></h2>
+  </div>
+  <div class="equipe-grid">
+    <div class="avocat-card reveal">
+      <div class="avocat-photo">M</div>
+      <div class="avocat-bar"></div>
+      <div class="avocat-info">
+        <div class="avocat-name">Maître Antoine Moreau</div>
+        <div class="avocat-role">Associé fondateur — Droit des affaires</div>
+        <p class="avocat-desc">Ancien élève de l'ENA, Maître Moreau est reconnu pour son expertise en M&A et droit boursier. Classé parmi les « 500 meilleurs avocats de France ».</p>
+      </div>
+    </div>
+    <div class="avocat-card reveal">
+      <div class="avocat-photo">L</div>
+      <div class="avocat-bar"></div>
+      <div class="avocat-info">
+        <div class="avocat-name">Maître Sophie Laurent</div>
+        <div class="avocat-role">Associée — Droit fiscal international</div>
+        <p class="avocat-desc">Docteure en droit fiscal de Paris II, Maître Laurent intervient pour des multinationales dans leurs structurations transfrontalières complexes.</p>
+      </div>
+    </div>
+    <div class="avocat-card reveal">
+      <div class="avocat-photo">D</div>
+      <div class="avocat-bar"></div>
+      <div class="avocat-info">
+        <div class="avocat-name">Maître Karim Dubois</div>
+        <div class="avocat-role">Associé — Droit pénal des affaires</div>
+        <p class="avocat-desc">Ancien juge d'instruction financier, Maître Dubois offre une connaissance unique des rouages de la justice économique et financière.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TÉMOIGNAGES -->
+<section id="temoignages">
+  <div class="equipe-header reveal"> <p class="section-label">Références clients</p>
+    <h2 class="section-title">Ce que disent<br><em>nos clients</em></h2>
+  </div>
+  
+  <div class="slider-container reveal">
+    <div class="temoignages-track" id="track">
+      <div class="temoignage">
+        <div class="stars">★★★★★</div>
+        <p class="temoignage-text">Moreau & Associés nous a accompagnés lors d'une acquisition stratégique majeure. Leur réactivité, leur rigueur et leur sens des affaires ont été déterminants pour le succès de l'opération.</p>
+        <div class="temoignage-author">
+          <div class="author-avatar">PD</div>
+          <div>
+            <div class="author-name">Pierre Durand</div>
+            <div class="author-title">Directeur Général — Groupe Industriel</div>
+          </div>
+        </div>
+      </div>
+      <div class="temoignage">
+        <div class="stars">★★★★★</div>
+        <p class="temoignage-text">Un cabinet qui allie la maîtrise technique pointue à une compréhension fine de nos enjeux business. Un partenaire stratégique indispensable depuis dix ans.</p>
+        <div class="temoignage-author">
+          <div class="author-avatar">MC</div>
+          <div>
+            <div class="author-name">Marie Céleste</div>
+            <div class="author-title">CFO — Société de gestion</div>
+          </div>
+        </div>
+      </div>
+      <div class="temoignage">
+        <div class="stars">★★★★★</div>
+        <p class="temoignage-text">La qualité de l'accompagnement fiscal dans nos opérations d'optimisation m'a impressionné. Des conseils toujours pertinents, délivrés avec une grande pédagogie.</p>
+        <div class="temoignage-author">
+          <div class="author-avatar">TR</div>
+          <div>
+            <div class="author-name">Thomas Renard</div>
+            <div class="author-title">Entrepreneur & Investisseur</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slider-nav">
+      <button class="nav-arrow prev" id="prevBtn">←</button>
+      <button class="nav-arrow next" id="nextBtn">→</button>
+    </div>
+  </div>
+
+  <div class="slider-dots" id="dotsContainer"></div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-info">
+    <p class="section-label">Contact</p>
+    <h2 class="section-title">Parlons de<br><em>votre situation</em></h2>
+    <p class="contact-desc">Chaque dossier est unique. Contactez-nous pour une première consultation confidentielle et sans engagement.</p>
+    <div class="contact-detail">
+      <div class="contact-icon">✦</div>
+      <div>
+        <div class="contact-label">Adresse</div>
+        <div class="contact-value">28, avenue Kléber — 75116 Paris</div>
+      </div>
+    </div>
+    <div class="contact-detail">
+      <div class="contact-icon">◌</div>
+      <div>
+        <div class="contact-label">Téléphone</div>
+        <div class="contact-value">+33 (0)1 45 67 89 00</div>
+      </div>
+    </div>
+    <div class="contact-detail">
+      <div class="contact-icon">◎</div>
+      <div>
+        <div class="contact-label">Email</div>
+        <div class="contact-value">contact@moreau-associes.fr</div>
+      </div>
+    </div>
+    <div class="contact-detail">
+      <div class="contact-icon">◇</div>
+      <div>
+        <div class="contact-label">Horaires</div>
+        <div class="contact-value">Lundi – Vendredi, 9h – 19h</div>
+      </div>
+    </div>
+  </div>
+  <div class="contact-form">
+    <p class="section-label" style="color:var(--or); margin-bottom: 40px;">Demande de consultation</p>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Prénom</label>
+        <input type="text" placeholder="Votre prénom">
+      </div>
+      <div class="form-group">
+        <label>Nom</label>
+        <input type="text" placeholder="Votre nom">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" placeholder="votre@email.fr">
+      </div>
+      <div class="form-group">
+        <label>Téléphone</label>
+        <input type="tel" placeholder="+33 6 00 00 00 00">
+      </div>
+    </div>
+    <div class="form-full">
+      <label style="display:block; font-family:'Lato',sans-serif; font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:rgba(245,240,232,0.5); margin-bottom:10px;">Domaine juridique</label>
+      <div class="select-wrapper">
+      <select>
+        <option value="">Sélectionner un domaine</option>
+        <option>Droit des affaires</option>
+        <option>Droit fiscal</option>
+        <option>Droit social</option>
+        <option>Droit pénal des affaires</option>
+        <option>Propriété intellectuelle</option>
+        <option>Droit immobilier</option>
+        <option>Autre</option>
+      </select>
+      </div>
+    </div>
+    <div class="form-full">
+      <label style="display:block; font-family:'Lato',sans-serif; font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:rgba(245,240,232,0.5); margin-bottom:10px;">Votre situation</label>
+      <textarea placeholder="Décrivez brièvement votre situation ou votre besoin..."></textarea>
+    </div>
+    <button class="form-submit">Envoyer ma demande</button>
+    <p class="form-note">Toutes vos informations sont traitées en toute confidentialité, dans le respect du secret professionnel.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo"><img src="img/logobleublanc.png" alt=""></div>
+  <div class="footer-copy">© 2024 Moreau & Associés — Tous droits réservés<br>Barreau de Paris — SIRET 123 456 789 00012 <br> Developed by HUEHA</div>
+  <div class="footer-links">
+    <a href="#">Mentions légales</a>
+    <a href="#">Confidentialité</a>
+    <a href="#">Barème d'honoraires</a>
+  </div>
+</footer>
+
+<script src="moder.js"></script>
+</body>
+</html>
