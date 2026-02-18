@@ -58,9 +58,9 @@
   }
 
   .logo img {
-    width: auto; height: 4rem;
-    margin-left: 2rem;
-     object-fit: contain;  
+    width: auto; height: 3rem;
+    margin-left: 0.5rem;
+    object-fit: contain;  
   }
   .logo span { color: var(--or); }
   .nav-links { display: flex; gap: 44px; list-style: none; }
@@ -525,10 +525,11 @@ nav.scrolled .nav-cta:hover{
 
 .temoignage {
   flex: 0 0 calc(50% - 15px); /* Affiche 2 avis sur PC */
-  min-width: 300px;
+  min-width: 280px;
   border: 1px solid #e0d8cc;
   padding: 48px 40px;
   background: var(--blanc);
+  position: relative;
   transition: transform 0.3s;
 }
 
@@ -982,150 +983,6 @@ nav.scrolled .hamburger { color: var(--bleurois); }
 
 @media (max-width: 800px) {
 
-  /* Cursor — désactiver le curseur custom sur tactile */
-  .cursor, .cursor-ring { display: none; }
-  * { cursor: auto; }
-
-  /* ── NAV ── */
-  nav {
-    padding: 16px 20px;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0;
-  }
-  nav.scrolled {
-    padding: 12px 20px;
-  }
-  .logo img { height: 3rem; margin-left: 0; }
-  .hamburger { display: block; margin-left: auto; }
-  .nav-links { display: none; }
-  .nav-cta { display: none; }
-
-  /* ── HERO ── */
-  #hero {
-    grid-template-columns: 1fr;
-    min-height: auto;
-    padding-left: 23px;
-    gap: 0;
-  }
-  .hero-left {
-    padding: 100px 24px 60px;
-    border-width: 0;
-    margin: 0;
-  }
-  .hero-title { font-size: clamp(2.5rem, 9vw, 3.5rem); }
-  .hero-desc { font-size: 1rem; margin-bottom: 36px; }
-  .hero-btns { flex-direction: column; gap: 14px; }
-  .btn-primary, .btn-secondary { text-align: center; padding: 14px 24px; }
-  .scroll-indicator { display: none; }
-
-  .hero-right {
-    min-height: 360px;
-    background-position: center 25%;
-    margin: 0;
-  }
-  .hero-right-inner {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 24px;
-    padding: 40px 24px;
-  }
-  .hero-right-inner::before { font-size: 8rem; opacity: 0.5; }
-  .hero-stat { margin-bottom: 0; }
-  .stat-num { font-size: 2.2rem; }
-
-  /* ── SECTIONS communes ── */
-  section { padding: 70px 20px; }
-
-  #domaines { padding: 70px 20px; }
-  .domaines-grid { grid-template-columns: 1fr 1fr; }
-  .domaine-card:nth-child(3n) { border-right: 1px solid #e0d8cc; }
-  .domaine-card:nth-child(2n) { border-right: none; }
-  .domaine-card:nth-child(5),
-  .domaine-card:nth-child(6) { border-bottom: none; }
-  .domaine-card:nth-child(4) { border-bottom: 1px solid #e0d8cc; }
-  .domaine-card { padding: 32px 20px; }
-
-  /* ── ABOUT ── */
-  #about { grid-template-columns: 1fr; }
-  .about-image { min-height: 340px; }
-  .about-image-inner { width: 220px; height: 300px; }
-  .about-image-inner span { font-size: 6rem; }
-  .about-badge {
-    width: 110px; height: 110px; padding: 16px;
-    bottom: -14px; right: -14px;
-  }
-  .badge-num { font-size: 2.2rem; }
-  .about-content { padding: 60px 40px; }
-  .about-values { grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 36px; }
-
-  /* ── ABOUT ── */
-  #about { grid-template-columns: 1fr; }
-  .about-image { min-height: 300px; }
-  .about-image-inner { width: 200px; height: 280px; }
-  .about-image-inner span { font-size: 6rem; }
-  .about-badge {
-    width: 110px; height: 110px; padding: 16px;
-    bottom: -14px; right: -14px;
-  }
-  .badge-num { font-size: 2.2rem; }
-  .about-values { grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 30px; }
-  .value-desc { font-size: 0.82rem; }
-
-  /* ── ÉQUIPE ── */
-  #equipe { padding: 70px 24px; }
-  .equipe-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-  }
-  .avocat-photo { height: 220px; font-size: 3.5rem; }
-  .avocat-info { padding: 20px 16px; }
-  .avocat-name { font-size: 1rem; }
-
-  /* ── TÉMOIGNAGES ── */
-  #temoignages { padding: 70px 24px; }
-  .temoignage {
-    flex: 0 0 calc(100% - 0px);
-    padding: 32px 24px;
-  }
-
-  /* ── CONTACT ── */
-  #contact {
-    grid-template-columns: 1fr;
-  }
-  .contact-info {
-    padding: 50px 24px;
-    border-right: none;
-    border-bottom: 1px solid rgba(200,169,110,0.15);
-  }
-  .contact-form { padding: 50px 24px; }
-  .form-row { grid-template-columns: 1fr; gap: 16px; }
-
-  /* ── FOOTER ── */
-  footer {
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-    padding: 40px 32px;
-    text-align: center;
-  }
-  .footer-logo img { margin-left: 0; }
-  .footer-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-}
-
-
-/* ══════════════════════════════════════════════
-   RESPONSIVE — moins de 300px (très petits écrans)
-   ══════════════════════════════════════════════ */
-@media (max-width: 500px) {
-
-  /* Cursor — désactiver le curseur custom sur tactile */
   .cursor, .cursor-ring { display: none; }
   * { cursor: auto; }
 
@@ -1137,10 +994,164 @@ nav.scrolled .hamburger { color: var(--bleurois); }
     align-items: center;
     gap: 0;
   }
-  nav.scrolled {
-    padding: 12px 16px;
+  nav.scrolled { padding: 12px 16px; }
+  .logo img { height: 2.4rem; margin-left: 0; }
+  .hamburger { display: block; margin-left: auto; }
+  .nav-links { display: none; }
+  .nav-cta { display: none; }
+
+  /* ── HERO ── */
+  #hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding-left: 0;
+    gap: 0;
   }
-  .logo img { height: 3rem; margin-left: 0; }
+  .hero-left {
+    padding: 90px 16px 52px;
+    border-width: 0;
+    margin: 0;
+  }
+  .hero-year { margin-bottom: 24px; }
+  .hero-title { font-size: clamp(2.2rem, 8vw, 3rem); margin-bottom: 20px; }
+  .hero-desc { font-size: 0.95rem; margin-bottom: 28px; max-width: 100%; }
+  .hero-btns { flex-direction: column; gap: 12px; }
+  .btn-primary, .btn-secondary { text-align: center; padding: 14px 20px; font-size: 0.68rem; }
+  .scroll-indicator { display: none; }
+
+  .hero-right {
+    min-height: 300px;
+    background-position: center 25%;
+    margin: 0;
+  }
+  .hero-right-inner {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 36px 16px;
+  }
+  .hero-right-inner::before { font-size: 7rem; opacity: 0.4; }
+  .hero-stat { margin-bottom: 0; }
+  .stat-num { font-size: 2rem; }
+  .stat-label { font-size: 0.6rem; }
+
+  /* ── SECTIONS communes ── */
+  section { padding: 60px 16px; }
+
+  /* ── DOMAINES ── */
+  #domaines { padding: 60px 16px; }
+  .domaines-grid { grid-template-columns: 1fr 1fr; }
+  .domaine-card:nth-child(3n) { border-right: 1px solid #e0d8cc; }
+  .domaine-card:nth-child(2n) { border-right: none; }
+  .domaine-card:nth-child(5),
+  .domaine-card:nth-child(6) { border-bottom: none; }
+  .domaine-card:nth-child(4) { border-bottom: 1px solid #e0d8cc; }
+  .domaine-card { padding: 28px 16px; }
+
+  /* ── ABOUT (Notre Cabinet) ── */
+  #about {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+  }
+  .about-image {
+    min-height: 260px;
+    order: 1;
+  }
+  .about-image-inner { width: 180px; height: 240px; }
+  .about-image-inner span { font-size: 5rem; }
+  .about-badge {
+    width: 96px; height: 96px; padding: 12px;
+    bottom: -12px; right: 16px;
+  }
+  .badge-num { font-size: 1.9rem; }
+  .badge-txt { font-size: 0.56rem; }
+  .about-content {
+    order: 2;
+    padding: 48px 16px 52px;
+  }
+  .about-text { font-size: 1rem; line-height: 1.75; margin-bottom: 16px; }
+  .about-values {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 28px;
+  }
+  .value-item { gap: 12px; }
+  .value-icon { width: 32px; height: 32px; min-width: 32px; font-size: 0.8rem; }
+  .value-label { font-size: 0.65rem; }
+  .value-desc { font-size: 0.8rem; }
+
+  /* ── ÉQUIPE ── */
+  #equipe { padding: 60px 16px; }
+  .equipe-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .avocat-photo { height: 200px; font-size: 3rem; }
+  .avocat-info { padding: 18px 14px; }
+  .avocat-name { font-size: 1rem; }
+  .avocat-role { font-size: 0.6rem; }
+  .avocat-desc { font-size: 0.8rem; }
+
+  /* ── TÉMOIGNAGES ── */
+  #temoignages {
+    padding: 60px 16px;
+    overflow: hidden;
+  }
+  .temoignages-track {
+    gap: 0;
+    padding: 10px 0;
+  }
+  .temoignage {
+    flex: 0 0 100%;
+    min-width: 0;
+    width: 100%;
+    padding: 28px 20px;
+    box-sizing: border-box;
+  }
+  .temoignage-text { font-size: 0.95rem; margin-bottom: 24px; }
+  .slider-nav { margin-top: 20px; }
+
+  /* ── CONTACT ── */
+  #contact { grid-template-columns: 1fr; }
+  .contact-info {
+    padding: 48px 16px;
+    border-right: none;
+    border-bottom: 1px solid rgba(200,169,110,0.15);
+  }
+  .contact-form { padding: 48px 16px; }
+  .form-row { grid-template-columns: 1fr; gap: 14px; }
+
+  /* ── FOOTER ── */
+  footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 36px 20px;
+    text-align: center;
+  }
+  .footer-logo img { margin-left: 0; }
+  .footer-links { flex-wrap: wrap; justify-content: center; gap: 16px; }
+}
+
+
+/* ══════════════════════════════════════════════
+   RESPONSIVE — moins de 300px (très petits écrans)
+   ══════════════════════════════════════════════ */
+@media (max-width: 500px) {
+
+  .cursor, .cursor-ring { display: none; }
+  * { cursor: auto; }
+
+  /* ── NAV ── */
+  nav {
+    padding: 12px 14px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+  }
+  nav.scrolled { padding: 10px 14px; }
+  .logo img { height: 2.2rem; margin-left: 0; }
   .hamburger { display: block; margin-left: auto; }
   .nav-links { display: none; }
   .nav-cta { display: none; }
@@ -1152,18 +1163,19 @@ nav.scrolled .hamburger { color: var(--bleurois); }
     gap: 0;
   }
   .hero-left {
-    padding: 100px 20px 60px;
+    padding: 85px 14px 48px;
     border-width: 0;
     margin: 0;
   }
-  .hero-title { font-size: clamp(2.4rem, 8vw, 3rem); }
-  .hero-desc { font-size: 1rem; margin-bottom: 36px; }
-  .hero-btns { flex-direction: column; gap: 12px; }
-  .btn-primary, .btn-secondary { text-align: center; padding: 14px 24px; }
+  .hero-year { margin-bottom: 20px; font-size: 0.6rem; }
+  .hero-title { font-size: clamp(2rem, 9vw, 2.8rem); margin-bottom: 16px; line-height: 1.1; }
+  .hero-desc { font-size: 0.9rem; margin-bottom: 24px; max-width: 100%; line-height: 1.7; }
+  .hero-btns { flex-direction: column; gap: 10px; }
+  .btn-primary, .btn-secondary { text-align: center; padding: 13px 18px; font-size: 0.65rem; width: 100%; }
   .scroll-indicator { display: none; }
 
   .hero-right {
-    min-height: 320px;
+    min-height: 260px;
     background-position: center 25%;
     margin: 0;
   }
@@ -1171,82 +1183,109 @@ nav.scrolled .hamburger { color: var(--bleurois); }
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 24px;
-    padding: 40px 20px;
+    gap: 16px;
+    padding: 28px 14px;
   }
-  .hero-right-inner::before { font-size: 8rem; opacity: 0.5; }
-  .hero-stat { margin-bottom: 0; }
-  .stat-num { font-size: 2rem; }
+  .hero-right-inner::before { font-size: 6rem; opacity: 0.3; }
+  .hero-stat { margin-bottom: 0; border-left-width: 2px; padding-left: 16px; }
+  .stat-num { font-size: 1.8rem; }
+  .stat-label { font-size: 0.58rem; }
 
   /* ── SECTIONS communes ── */
-  section { padding: 60px 20px; }
+  section { padding: 52px 14px; }
 
   /* ── DOMAINES ── */
-  #domaines { padding: 60px 20px; }
+  #domaines { padding: 52px 14px; }
   .domaines-grid { grid-template-columns: 1fr; }
-  .domaine-card:nth-child(3n) { border-right: 1px solid #e0d8cc; }
-  .domaine-card:nth-child(2n) { border-right: 1px solid #e0d8cc; }
-  .domaine-card:nth-child(n+5) { border-bottom: 1px solid #e0d8cc; }
+  .domaine-card { border-right: none; }
   .domaine-card:last-child { border-bottom: none; }
-  .domaine-card { padding: 30px 20px; }
+  .domaine-card { padding: 26px 16px; }
 
-  /* ── ABOUT ── */
-  #about { grid-template-columns: 1fr; }
-  .about-image { min-height: 300px; }
-  .about-image-inner { width: 200px; height: 260px; }
-  .about-image-inner span { font-size: 5rem; }
-  .about-badge {
-    width: 100px; height: 100px; padding: 12px;
-    bottom: -12px; right: -12px;
+  /* ── ABOUT (Notre Cabinet) ── */
+  #about {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: unset;
   }
-  .badge-num { font-size: 2rem; }
-  .about-content { padding: 48px 20px; }
-  .about-values { grid-template-columns: 1fr; gap: 14px; margin-top: 28px; }
-  .value-desc { font-size: 0.85rem; }
+  .about-image {
+    min-height: 230px;
+    order: 1;
+  }
+  .about-image-inner { width: 160px; height: 210px; }
+  .about-image-inner span { font-size: 4rem; }
+  .about-badge {
+    width: 86px; height: 86px; padding: 10px;
+    bottom: -10px; right: 14px;
+  }
+  .badge-num { font-size: 1.7rem; }
+  .badge-txt { font-size: 0.52rem; }
+  .about-content {
+    order: 2;
+    padding: 44px 14px 48px;
+  }
+  .about-text { font-size: 0.95rem; line-height: 1.75; margin-bottom: 14px; }
+  .about-values {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 24px;
+  }
+  .value-item { gap: 10px; align-items: flex-start; }
+  .value-icon { width: 30px; height: 30px; min-width: 30px; font-size: 0.75rem; }
+  .value-label { font-size: 0.62rem; margin-bottom: 2px; }
+  .value-desc { font-size: 0.78rem; }
 
   /* ── ÉQUIPE ── */
-  #equipe { padding: 60px 20px; }
-  .equipe-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  .avocat-photo { height: 200px; font-size: 3.5rem; }
-  .avocat-info { padding: 20px 16px; }
-  .avocat-name { font-size: 1.1rem; }
+  #equipe { padding: 52px 14px; }
+  .equipe-grid { grid-template-columns: 1fr; gap: 18px; }
+  .avocat-photo { height: 180px; font-size: 3rem; }
+  .avocat-info { padding: 18px 14px; }
+  .avocat-name { font-size: 1rem; }
+  .avocat-role { font-size: 0.6rem; }
+  .avocat-desc { font-size: 0.82rem; }
 
   /* ── TÉMOIGNAGES ── */
-  #temoignages { padding: 60px 20px; }
-  .temoignage {
-    flex: 0 0 calc(100% - 0px);
-    padding: 30px 20px;
+  #temoignages {
+    padding: 52px 14px;
+    overflow: hidden;
   }
+  .temoignages-track {
+    gap: 0;
+    padding: 8px 0;
+  }
+  .temoignage {
+    flex: 0 0 100%;
+    min-width: 0;
+    width: 100%;
+    padding: 24px 16px;
+    box-sizing: border-box;
+  }
+  .temoignage-text { font-size: 0.92rem; line-height: 1.75; margin-bottom: 20px; }
+  .author-name { font-size: 0.9rem; }
+  .author-title { font-size: 0.6rem; }
+  .slider-nav { margin-top: 16px; }
+  .nav-arrow { width: 42px; height: 42px; font-size: 1rem; }
 
   /* ── CONTACT ── */
-  #contact {
-    grid-template-columns: 1fr;
-  }
+  #contact { grid-template-columns: 1fr; }
   .contact-info {
-    padding: 50px 20px;
+    padding: 44px 14px;
     border-right: none;
     border-bottom: 1px solid rgba(200,169,110,0.15);
   }
-  .contact-form { padding: 50px 20px; }
-  .form-row { grid-template-columns: 1fr; gap: 16px; }
+  .contact-form { padding: 44px 14px; }
+  .form-row { grid-template-columns: 1fr; gap: 14px; }
 
   /* ── FOOTER ── */
   footer {
     flex-direction: column;
     align-items: center;
-    gap: 24px;
-    padding: 40px 32px;
+    gap: 18px;
+    padding: 32px 16px;
     text-align: center;
   }
   .footer-logo img { margin-left: 0; }
-  .footer-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
+  .footer-links { flex-wrap: wrap; justify-content: center; gap: 14px; }
 }
 
 
