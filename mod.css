@@ -505,6 +505,15 @@ section { padding: 120px 60px; }
   background: url(imagehero1.jpg) center center / cover no-repeat;
   overflow: hidden;
 }
+
+.about-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* affiche l'image entière sans recadrage */
+  background-color: #0a1628; /* fond bleu pour combler les bords */
+  display: block;
+}
+
 .about-img-overlay {
   position: absolute; inset: 0;
   background: linear-gradient(to right, rgba(2,19,58,0) 60%, var(--navy-deep) 100%);
