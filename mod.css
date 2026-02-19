@@ -972,7 +972,7 @@ footer {
   nav.scrolled { padding: 14px 28px; }
 
   #hero { min-height: 100svh; }
-  .hero-content { padding: 0 28px 180px; margin-top: 10px; }
+  .hero-content { padding: 0 28px 180px; margin-top: 80px; }
   .hero-title { font-size: clamp(2.6rem, 8vw, 4.5rem); }
   .hero-stats {
     display: grid;
@@ -1030,8 +1030,8 @@ footer {
 
   /* Hero */
   #hero { min-height: 100svh; display: flex; flex-direction: column; justify-content: flex-start; }
-  .hero-content { padding: 0 20px 160px; margin-top: 10px; }
-  .hero-tag { margin-bottom: 28px; font-size: 0.6rem; }
+  .hero-content { padding: 0 20px 160px; margin-top: 80px; }
+  .hero-tag { margin-bottom: 16px; font-size: 0.6rem; }
   .hero-title { font-size: clamp(2.4rem, 11vw, 3.4rem); line-height: 1.05; margin-bottom: 20px; }
   .hero-subtitle-word { font-size: 0.65em; }
   .hero-desc { font-size: 0.92rem; line-height: 1.75; margin-bottom: 32px; }
