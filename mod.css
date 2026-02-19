@@ -241,7 +241,7 @@ nav.scrolled .hamburger span { background: var(--navy); }
   position: relative; min-height: 100vh;
   display: flex; flex-direction: column;
   justify-content: center;
-  overflow: hidden;
+  /* overflow: hidden retiré — empêchait la barre de stats d'être visible */
   background: var(--navy-deep);
 }
 
@@ -274,7 +274,7 @@ nav.scrolled .hamburger span { background: var(--navy); }
 .hero-content {
   position: relative; z-index: 1;
   max-width: 800px;
-  padding: 0 60px;
+  padding: 0 60px 200px; /* padding-bottom: 200px pour que les boutons ne soient pas cachés par la stats bar */
   margin-top: 60px;
 }
 
@@ -369,7 +369,7 @@ nav.scrolled .hamburger span { background: var(--navy); }
 
 /* Scroll indicator */
 .hero-scroll {
-  position: absolute; bottom: 130px; right: 60px; z-index: 3;
+  position: absolute; bottom: 160px; right: 60px; z-index: 3;
   display: flex; align-items: center; gap: 12px;
   font-family: 'Jost', sans-serif;
   font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase;
@@ -388,7 +388,7 @@ nav.scrolled .hamburger span { background: var(--navy); }
 
 /* Slide counter */
 .hero-slide-counter {
-  position: absolute; bottom: 130px; left: 60px; z-index: 3;
+  position: absolute; bottom: 160px; left: 60px; z-index: 3;
   display: flex; align-items: center; gap: 14px;
   font-family: 'Jost', sans-serif;
   font-size: 0.65rem; letter-spacing: 0.15em;
@@ -424,7 +424,12 @@ section { padding: 120px 60px; }
 .section-header { margin-bottom: 80px; }
 
 /* ══ DOMAINES ══ */
-#domaines { background: var(--blanc); padding: 120px 60px; }
+#domaines {
+  background: var(--blanc);
+  padding: 120px 60px;
+  position: relative;
+  z-index: 1; /* z-index pour être au-dessus du hero qui n'a plus overflow:hidden */
+}
 
 .domaines-grid {
   display: grid;
