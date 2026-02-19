@@ -1339,3 +1339,73 @@ nav.scrolled .hamburger { color: var(--bleurois); }
 
 /* Overlay invisible — le menu pleine page suffit */
 .mobile-overlay { display: none !important; }
+
+/* ── SUPPRESSION DÉFILEMENT HORIZONTAL MOBILE ── */
+@media (max-width: 800px) {
+  html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw;
+  }
+
+  /* Empêcher tout élément de dépasser la largeur de l'écran */
+  #hero,
+  #domaines,
+  #about,
+  #equipe,
+  #temoignages,
+  #contact,
+  section,
+  nav,
+  footer {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  /* Hero : supprimer le margin-bottom excessif qui peut créer un espace horizontal */
+  .hero-left {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Boutons hero : éviter débordement sur très petits écrans */
+  .hero-btns {
+    width: 100%;
+    max-width: 100%;
+  }
+  .btn-primary, .btn-secondary {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Grilles : forcer à ne pas dépasser */
+  .domaines-grid,
+  .equipe-grid,
+  .about-values {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Slider témoignages : contenir strictement */
+  .temoignages-track {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Contact */
+  .contact-info,
+  .contact-form,
+  .form-row {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Images */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
