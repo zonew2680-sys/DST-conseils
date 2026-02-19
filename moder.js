@@ -17,6 +17,8 @@ const mobileLinks = document.querySelectorAll('.mobile-link, .mobile-cta');
 
 function openMenu() {
   mobileMenu.style.display = 'flex';
+  mobileMenu.style.flexDirection = 'column';
+  mobileMenu.style.alignItems = 'stretch';
   requestAnimationFrame(() => {
     mobileMenu.classList.add('open');
   });
