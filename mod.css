@@ -1171,6 +1171,7 @@ nav.scrolled .hamburger { color: var(--bleurois); }
     border-width: 0;
     margin: 0;
     justify-content: center;
+    margin-bottom: 17rem;
   }
   .hero-year { margin-bottom: 20px; font-size: 0.6rem; }
   .hero-title { font-size: clamp(2rem, 9vw, 2.8rem); margin-bottom: 16px; line-height: 1.1; }
