@@ -972,13 +972,18 @@ footer {
   nav.scrolled { padding: 14px 28px; }
 
   #hero { min-height: 100svh; }
-  .hero-content { padding: 0 28px; margin-top: 80px; }
+  .hero-content { padding: 0 28px 220px; margin-top: 100px; }
   .hero-title { font-size: clamp(2.6rem, 8vw, 4.5rem); }
-  .hero-stats { flex-wrap: wrap; gap: 20px; padding: 24px 28px; }
+  .hero-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+    padding: 0 28px;
+  }
+  .hero-stat { padding: 24px 0; }
   .stat-divider { display: none; }
-  .hero-stat { flex: 0 0 calc(50% - 10px); }
   .hero-scroll { display: none; }
-  .hero-slide-counter { left: 28px; bottom: auto; top: 50%; }
+  .hero-slide-counter { display: none; }
 
   #domaines, #equipe { padding: 80px 28px; }
   .domaines-grid { grid-template-columns: 1fr 1fr; }
@@ -1018,49 +1023,91 @@ footer {
   * { cursor: auto; }
   .cursor, .cursor-ring { display: none; }
 
-  nav { padding: 16px 18px; }
-  nav.scrolled { padding: 12px 18px; }
-  .logo img { height: 2.4rem; }
+  /* Nav */
+  nav { padding: 16px 20px; }
+  nav.scrolled { padding: 12px 20px; }
+  .logo img { height: 2.6rem; }
 
-  #hero { min-height: 100svh; }
-  .hero-content { padding: 0 18px; margin-top: 90px; }
-  .hero-title { font-size: clamp(2.2rem, 10vw, 3rem); }
-  .hero-desc { font-size: 0.95rem; margin-bottom: 36px; }
-  .hero-btns { flex-direction: column; }
-  .btn-primary, .btn-secondary { text-align: center; justify-content: center; padding: 16px 24px; }
-  .hero-stats { padding: 20px 18px; }
-  .stat-num { font-size: 2.2rem; }
+  /* Hero */
+  #hero { min-height: 100svh; display: flex; flex-direction: column; justify-content: flex-start; }
+  .hero-content { padding: 0 20px 32px; margin-top: 100px; }
+  .hero-tag { margin-bottom: 28px; font-size: 0.6rem; }
+  .hero-title { font-size: clamp(2.4rem, 11vw, 3.4rem); line-height: 1.05; margin-bottom: 20px; }
+  .hero-subtitle-word { font-size: 0.65em; }
+  .hero-desc { font-size: 0.92rem; line-height: 1.75; margin-bottom: 32px; }
+  .hero-btns { flex-direction: column; gap: 12px; }
+  .btn-primary, .btn-secondary { text-align: center; justify-content: center; padding: 15px 24px; width: 100%; }
 
-  section { padding: 70px 18px; }
-  #domaines, #equipe { padding: 70px 18px; }
+  /* Stats */
+  .hero-stats {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+    padding: 16px 20px;
+  }
+  .hero-stat { padding: 14px 6px; }
+  .stat-num { font-size: 1.7rem; }
+  .stat-num span { font-size: 1.1rem; }
+  .stat-label { font-size: 0.5rem; letter-spacing: 0.1em; }
+  .stat-divider { display: none; }
+  .hero-slide-counter { display: none; }
+  .hero-scroll { display: none; }
 
+  /* Sections */
+  section { padding: 64px 20px; }
+  #domaines, #equipe { padding: 64px 20px; }
+  .section-title { font-size: clamp(2rem, 8vw, 2.8rem); }
+
+  /* Domaines */
   .domaines-grid { grid-template-columns: 1fr; }
-  .domaine-card { border-right: none !important; }
+  .domaine-card { border-right: none !important; padding: 32px 20px; }
   .domaine-card:last-child { border-bottom: none; }
-  .domaine-card { padding: 36px 24px; }
+  .domaine-title { font-size: 1.3rem; }
 
-  #about .about-image { min-height: 280px; }
-  .about-badge { width: 130px; padding: 20px 24px; }
-  .badge-num { font-size: 2.5rem; }
-  .about-content { padding: 48px 18px; }
-  .about-values { grid-template-columns: 1fr; gap: 14px; }
+  /* About */
+  #about .about-image { min-height: 260px; }
+  .about-badge { width: 130px; padding: 18px 20px; bottom: 20px; left: 20px; }
+  .badge-num { font-size: 2.2rem; }
+  .about-content { padding: 44px 20px; }
+  .about-values { grid-template-columns: 1fr; gap: 12px; }
+  .about-lead { font-size: 1.4rem; }
 
-  #chiffres { padding: 50px 18px; }
-  .chiffre-item { flex: 0 0 100%; }
-  .chiffre-num { font-size: 3.5rem; }
+  /* Chiffres */
+  #chiffres { padding: 50px 20px; }
+  .chiffre-item { flex: 0 0 100%; padding: 28px 0; }
+  .chiffre-num { font-size: 3.2rem; }
 
-  .equipe-grid { grid-template-columns: 1fr; gap: 20px; }
+  /* Equipe */
+  .equipe-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .avocat-photo { height: 200px; }
+  .avocat-info { padding: 16px; }
+  .avocat-name { font-size: 1.1rem; }
 
-  .temoignages-bg { padding: 60px 18px; }
-  .temoignage { flex: 0 0 100%; padding: 32px 24px; }
+  /* Temoignages */
+  .temoignages-bg { padding: 60px 20px; }
+  .temoignage { flex: 0 0 calc(100vw - 40px); padding: 28px 20px; }
+  .temoignage-text { font-size: 1rem; }
 
-  .contact-info, .contact-form { padding: 48px 18px; }
+  /* Contact */
+  .contact-info, .contact-form { padding: 44px 20px; }
 
-  .footer-top { padding: 48px 18px; }
-  .footer-nav { grid-template-columns: 1fr; }
-  .footer-bottom { padding: 20px 18px; }
+  /* Footer */
+  .footer-top { padding: 44px 20px; }
+  .footer-nav { grid-template-columns: 1fr 1fr; gap: 28px; }
+  .footer-bottom { padding: 20px 20px; }
 
+  /* Mobile menu */
   .mobile-menu { padding: 0 24px 40px; }
   .mobile-menu-header { padding: 20px 0; }
-  .mobile-link { font-size: 1.8rem; }
+  .mobile-link { font-size: 1.9rem; gap: 16px; }
+  .mobile-cta { padding: 14px 32px; font-size: 0.68rem; }
+}
+
+@media (max-width: 380px) {
+  .hero-title { font-size: clamp(2rem, 12vw, 2.6rem); }
+  .equipe-grid { grid-template-columns: 1fr; }
+  .avocat-photo { height: 260px; }
+  .mobile-link { font-size: 1.6rem; }
+  .stat-label { font-size: 0.46rem; }
 }
