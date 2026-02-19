@@ -971,8 +971,8 @@ footer {
   nav { padding: 20px 28px; }
   nav.scrolled { padding: 14px 28px; }
 
-  #hero { min-height: 100svh; }
-  .hero-content { padding: 0 28px 180px; margin-top: 80px; }
+  #hero { min-height: 100svh; display: flex; flex-direction: column; justify-content: flex-start; padding-top: 74px; }
+  .hero-content { padding: 20px 28px 180px; margin-top: 0; }
   .hero-title { font-size: clamp(2.6rem, 8vw, 4.5rem); }
   .hero-stats {
     display: grid;
@@ -1029,8 +1029,8 @@ footer {
   .logo img { height: 2.6rem; }
 
   /* Hero */
-  #hero { min-height: 100svh; display: flex; flex-direction: column; justify-content: flex-start; }
-  .hero-content { padding: 0 20px 160px; margin-top: 80px; }
+  #hero { min-height: 100svh; display: flex; flex-direction: column; justify-content: flex-start; padding-top: 70px; }
+  .hero-content { padding: 20px 20px 160px; margin-top: 0; }
   .hero-tag { margin-bottom: 16px; font-size: 0.6rem; }
   .hero-title { font-size: clamp(2.4rem, 11vw, 3.4rem); line-height: 1.05; margin-bottom: 20px; }
   .hero-subtitle-word { font-size: 0.65em; }
