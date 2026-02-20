@@ -247,3 +247,31 @@ window.addEventListener('scroll', () => {
 });
 
 }); // fin DOMContentLoaded
+
+
+/* ══════════════════════════════════════════════════════════════
+   JS SPONSORS — Coller dans moder.js, dans le DOMContentLoaded,
+   juste après le bloc « ── CURSOR ── »
+   ══════════════════════════════════════════════════════════════ */
+
+// ── SPONSORS — Intégration curseur custom ──
+document.querySelectorAll('.sponsor-item').forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    if (cursor && ring) {
+      cursor.style.transform   = 'translate(-50%, -50%) scale(2.8)';
+      cursor.style.background  = 'rgba(200,169,110,0.6)';
+      ring.style.width         = '64px';
+      ring.style.height        = '64px';
+      ring.style.borderColor   = 'rgba(200,169,110,0.5)';
+    }
+  });
+  el.addEventListener('mouseleave', () => {
+    if (cursor && ring) {
+      cursor.style.transform  = 'translate(-50%, -50%) scale(1)';
+      cursor.style.background = 'var(--or)';
+      ring.style.width        = '36px';
+      ring.style.height       = '36px';
+      ring.style.borderColor  = 'var(--or)';
+    }
+  });
+});
