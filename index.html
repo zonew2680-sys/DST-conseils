@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DST Conseils — Cabinet de conseils juridiques</title>
+<link rel="stylesheet" href="mod.css">
+<link rel="shortcut icon" href="logobleu.png" type="image/x-icon">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- LOADING SCREEN -->
+<div class="loader" id="loader">
+  <div class="loader-inner">
+    <img src="img/logo.png" alt="DST Conseils" class="loader-logo">
+    <div class="loader-bar"><div class="loader-fill"></div></div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="index.html" class="logo">
+    <img class="logo-default" src="img/logo.png" alt="DST Conseils">
+    <img class="logo-scrolled" src="img/logobleublanc.png" alt="DST Conseils">
+  </a>
+  <ul class="nav-links">
+    <li><a href="#domaines">Expertise</a></li>
+    <li><a href="#about">Cabinet</a></li>
+    <li><a href="squad.html">Équipe</a></li>
+    <li><a href="#temoignages">Références</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Consultation</a>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu" style="display:none">
+  <div class="mobile-menu-header">
+    <img src="img/logoblanc.png" alt="DST Conseils" class="mobile-logo">
+    <button class="mobile-menu-close" id="mobileClose" aria-label="Fermer">&#x2715;</button>
+  </div>
+  <nav class="mobile-nav">
+    <ul>
+      <li><a href="#domaines" class="mobile-link"><span class="mobile-num">01</span>Expertise</a></li>
+      <li><a href="#about" class="mobile-link"><span class="mobile-num">02</span>Cabinet</a></li>
+      <li><a href="squad.html" class="mobile-link"><span class="mobile-num">03</span>Équipe</a></li>
+      <li><a href="#temoignages" class="mobile-link"><span class="mobile-num">04</span>Références</a></li>
+    </ul>
+    <a href="#contact" class="mobile-cta">Demander une consultation</a>
+  </nav>
+  <div class="mobile-footer-info">
+    <span>+225 05 01 77 38 38 <br> +225 07 11 49 05 94</span>
+    <span>conseilsdst@gmail.com</span>
+  </div>
+</div>
+<div class="mobile-overlay" id="mobileOverlay" style="display:none"></div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg">
+    <div class="hero-slide active" style="background-image: url(img/imagehero.jpg)"></div>
+    <div class="hero-slide" style="background-image: url(img/imagehero1.jpg)"></div>
+    <div class="hero-slide" style="background-image: url(img/imagehero2.png)"></div>
+    <div class="hero-overlay"></div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-tag reveal-hero">
+      <span class="tag-line"></span>
+      <span>10ans d'Expérience — Abidjan, Côte d'Ivoire </span>
+    </div>
+    <h1 class="hero-title reveal-hero" style="--d:0.2s">
+      L'Excellence<br>
+      <em>Juridique</em><br>
+      <span class="hero-subtitle-word">À votre service</span>
+    </h1>
+    <p class="hero-desc reveal-hero" style="--d:0.5s">
+      Un cabinet de conseils juridiques de premier rang, dédié à la protection de vos intérêts avec rigueur, confidentialité et expertise reconnue.
+    </p>
+    <div class="hero-btns reveal-hero" style="--d:0.7s">
+      <a href="#contact" class="btn-primary">
+        <span>Prendre rendez-vous</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#domaines" class="btn-secondary">Nos domaines</a>
+    </div>
+  </div>
+
+  <div class="hero-stats reveal-hero" style="--d:0.9s">
+    <div class="hero-stat">
+      <div class="stat-num">10<span>+</span></div>
+      <div class="stat-label">Années d'expérience</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="hero-stat">
+      <div class="stat-num">2 400</div>
+      <div class="stat-label">Dossiers traités</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="hero-stat">
+      <div class="stat-num">92<span>%</span></div>
+      <div class="stat-label">Satisfaction client</div>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Défiler</span>
+  </div>
+
+  <div class="hero-slide-counter">
+    <span id="slideCurrentNum">01</span>
+    <div class="counter-bar"><div class="counter-fill" id="counterFill"></div></div>
+    <span id="slideTotalNum">02</span>
+  </div>
+</section>
+
+<!-- DOMAINES -->
+<section id="domaines">
+  <div class="section-header reveal">
+    <p class="section-label">Expertise</p>
+    <h2 class="section-title">Nos domaines<br><em>d'intervention</em></h2>
+  </div>
+  <div class="domaines-grid">
+    <div class="domaine-card reveal">
+      <div class="domaine-num">01</div>
+      <div class="domaine-icon">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 4L36 12V20C36 28.837 28.837 36 20 36C11.163 36 4 28.837 4 20V12L20 4Z" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M14 20L18 24L26 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h3 class="domaine-title">Droit des Affaires</h3>
+      <p class="domaine-desc">Conseil et assistance dans toutes les opérations commerciales : fusions-acquisitions, contrats, restructurations et due diligence.</p>
+      <a href="#" class="domaine-link">En savoir plus <span>→</span></a>
+    </div>
+    <div class="domaine-card reveal">
+      <div class="domaine-num">02</div>
+      <div class="domaine-icon">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Document / titre -->
+  <path d="M10 6H24L30 12V34H10V6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Coin replié -->
+  <path d="M24 6L24 12H30" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Lignes de texte -->
+  <line x1="14" y1="18" x2="26" y2="18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="14" y1="22" x2="26" y2="22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Symbole % -->
+  <circle cx="18" cy="28" r="1.2" stroke="currentColor" stroke-width="1.3"/>
+  <circle cx="22" cy="28" r="1.2" stroke="currentColor" stroke-width="1.3"/>
+  <line x1="16" y1="30" x2="24" y2="26" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+</svg>
+      </div>
+      <h3 class="domaine-title">Droit des Obligations</h3>
+      <p class="domaine-desc">Conseil et assistance dans toutes les opérations relevant du droit des obligations, de la rédaction contractuelle à la résolution des litiges.</p>
+      <a href="#" class="domaine-link">En savoir plus <span>→</span></a>
+    </div>
+    <div class="domaine-card reveal">
+      <div class="domaine-num">03</div>
+      <div class="domaine-icon">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Corps de la mallette -->
+  <rect x="6" y="16" width="28" height="18" rx="2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Poignée -->
+  <path d="M15 16V13C15 11.343 16.343 10 18 10H22C23.657 10 25 11.343 25 13V16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Ligne centrale horizontale -->
+  <line x1="6" y1="25" x2="34" y2="25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Fermoir central -->
+  <rect x="18" y="23" width="4" height="4" rx="1" stroke="currentColor" stroke-width="1.5"/>
+</svg>
+      </div>
+      <h3 class="domaine-title">Droit du Travail</h3>
+      <p class="domaine-desc">Conseil et assistance dans toutes les relations de travail : contrats d'emploi, licenciements, négociations collectives et contentieux social.</p>
+      <a href="#" class="domaine-link">En savoir plus <span>→</span></a>
+    </div>
+    <div class="domaine-card reveal">
+      <div class="domaine-num">04</div>
+      <div class="domaine-icon">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fût et socle -->
+  <path d="M16 34H24M20 34V12M8 12H32" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Chaînes des plateaux -->
+  <path d="M9 12V20M31 12V20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Plateau gauche -->
+  <path d="M5 20H13M5 20Q9 26 13 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Plateau droit -->
+  <path d="M27 20H35M27 20Q31 26 35 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Pièce / symbole fiscal au centre du fléau -->
+  <circle cx="20" cy="9" r="3" stroke="currentColor" stroke-width="1.5"/>
+  <path d="M19 9H21M20 7V11" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+</svg>
+      </div>
+      <h3 class="domaine-title">Droit Fiscal</h3>
+      <p class="domaine-desc">Optimisation fiscale, contentieux fiscal, TVA, fiscalité internationale et accompagnement lors de contrôles fiscaux.</p>
+      <a href="#" class="domaine-link">En savoir plus <span>→</span></a>
+    </div>
+    <div class="domaine-card reveal">
+      <div class="domaine-num">05</div>
+      <div class="domaine-icon">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 8C16.686 8 14 10.686 14 14C14 17.314 16.686 20 20 20C23.314 20 26 17.314 26 14C26 10.686 23.314 8 20 8Z" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M8 34C8 27.373 13.373 22 20 22C26.627 22 32 27.373 32 34" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <h3 class="domaine-title">Droit Social</h3>
+      <p class="domaine-desc">Relations individuelles et collectives de travail, restructurations sociales, négociations et contentieux prud'homal.</p>
+      <a href="#" class="domaine-link">En savoir plus <span>→</span></a>
+    </div>
+    <div class="domaine-card reveal">
+      <div class="domaine-num">06</div>
+      <div class="domaine-icon">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Adulte gauche -->
+  <circle cx="10" cy="9" r="3.2" stroke="currentColor" stroke-width="1.5"/>
+  <path d="M4.5 26V21.5C4.5 19.015 6.515 17 9 17H11C13.485 17 15.5 19.015 15.5 21.5V26"
+    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Adulte droit -->
+  <circle cx="30" cy="9" r="3.2" stroke="currentColor" stroke-width="1.5"/>
+  <path d="M24.5 26V21.5C24.5 19.015 26.515 17 29 17H31C33.485 17 35.5 19.015 35.5 21.5V26"
+    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Enfant centré -->
+  <circle cx="20" cy="22" r="2.4" stroke="currentColor" stroke-width="1.5"/>
+  <path d="M15.5 34V31C15.5 29.343 16.843 28 18.5 28H21.5C23.157 28 24.5 29.343 24.5 31V34"
+    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Mains reliées -->
+  <line x1="15.5" y1="22" x2="17.6" y2="23.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="24.5" y1="22" x2="22.4" y2="23.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
+      </div>
+      <h3 class="domaine-title">Droit de la famille</h3>
+      <p class="domaine-desc">Conseil et assistance dans toutes les situations familiales : divorces, garde d'enfants, successions et contentieux familial.</p>
+      <a href="#" class="domaine-link">En savoir plus <span>→</span></a>
+    </div>
+    <div class="domaine-card reveal">
+      <div class="domaine-num">07</div>
+      <div class="domaine-icon">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="8" y="8" width="24" height="28" rx="2" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M13 16H27M13 22H27M13 28H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <h3 class="domaine-title">Propriété Intellectuelle</h3>
+      <p class="domaine-desc">Protection des marques, brevets, droits d'auteur, noms de domaine et accompagnement en cas de contrefaçon.</p>
+      <a href="#" class="domaine-link">En savoir plus <span>→</span></a>
+    </div>
+    <div class="domaine-card reveal">
+      <div class="domaine-num">08</div>
+      <div class="domaine-icon">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 32V20L20 10L32 20V32" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M16 32V24H24V32" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h3 class="domaine-title">Droit Immobilier</h3>
+      <p class="domaine-desc">Transactions immobilières, baux commerciaux, promotion immobilière, contentieux et montages patrimoniaux complexes.</p>
+      <a href="#" class="domaine-link">En savoir plus <span>→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-image">
+  <img src="img/notrecabinet.png" alt="Cabinet DST Conseils" class="about-img">
+  <div class="about-img-overlay"></div>
+  <div class="about-badge reveal">
+    <span class="badge-num">10</span>
+    <span class="badge-txt">ans d'excellence</span>
+  </div>
+</div>  
+  <div class="about-content">
+    <p class="section-label">Notre cabinet</p>
+    <h2 class="section-title reveal">Un engagement<br><em>sans compromis</em></h2>
+    <p class="about-text reveal">
+      Fondé par un conseil juridique expérimenté, DST Conseils s'est imposé comme l'un des cabinets de référence dans le paysage juridique ivoirien. Notre approche conjugue expertise technique pointue et compréhension profonde des enjeux économiques.
+    </p>
+    <p class="about-text reveal">
+      Nous accompagnons aussi bien les grandes entreprises, que les SARL en pleine croissance, les fonds d'investissement et les entrepreneurs dans leurs projets les plus ambitieux.
+    </p>
+    <div class="about-values reveal">
+      <div class="value-item">
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M12 2L14.5 9H22L16 13.5L18.5 21L12 16.5L5.5 21L8 13.5L2 9H9.5L12 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </div>
+        <div>
+          <div class="value-label">Intégrité</div>
+          <div class="value-desc">Un engagement éthique à chaque étape</div>
+        </div>
+      </div>
+      <div class="value-item">
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M8 12l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div>
+          <div class="value-label">Expertise</div>
+          <div class="value-desc">Des conseils juridiques reconnus dans leurs domaines</div>
+        </div>
+      </div>
+      <div class="value-item">
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </div>
+        <div>
+          <div class="value-label">Réactivité</div>
+          <div class="value-desc">Disponibles dans les moments critiques</div>
+        </div>
+      </div>
+      <div class="value-item">
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z" stroke="currentColor" stroke-width="1.5"/><path d="M12 8v4l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <div>
+          <div class="value-label">Confidentialité</div>
+          <div class="value-desc">Secret professionnel absolu</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHIFFRES CLÉ (nouvelle section) -->
+<section id="chiffres">
+  <div class="chiffres-inner">
+    <div class="chiffre-item reveal">
+      <div class="chiffre-num" data-target="10">0</div>
+      <div class="chiffre-suffix">+</div>
+      <div class="chiffre-label">Années d'expérience</div>
+    </div>
+    <div class="chiffre-sep"></div>
+    <div class="chiffre-item reveal">
+      <div class="chiffre-num" data-target="2400">0</div>
+      <div class="chiffre-label">Dossiers traités</div>
+    </div>
+    <div class="chiffre-sep"></div>
+    <div class="chiffre-item reveal">
+      <div class="chiffre-num" data-target="92">0</div>
+      <div class="chiffre-suffix">%</div>
+      <div class="chiffre-label">Satisfaction client</div>
+    </div>
+    <div class="chiffre-sep"></div>
+    <div class="chiffre-item reveal">
+      <div class="chiffre-num" data-target="12">0</div>
+      <div class="chiffre-label">conseils associés</div>
+    </div>
+  </div>
+</section>
+
+<!-- ÉQUIPE -->
+<section id="equipe">
+  <div class="section-header reveal" style="text-align:center; margin-bottom: 70px;">
+    <p class="section-label" style="justify-content:center;">Notre équipe</p>
+    <h2 class="section-title" style="text-align:center;">Des conseils juridiques<br><em>d'exception</em></h2>
+  </div>
+  <div class="equipe-grid">
+    <div class="avocat-card reveal">
+      <div class="avocat-photo" style="background-image: url(imagehero.jpg); background-size:cover; background-position: center 10%;">
+        <div class="avocat-photo-overlay"></div>
+        <img src="img/Maître touame.jpg" alt="maître TOUAME">
+      </div>
+      <div class="avocat-bar"></div>
+      <div class="avocat-info">
+        <div class="avocat-name">Maître Stéphane D. TOUAME</div>
+        <div class="avocat-role">Fondateur — Arbitre Professionnel diplômé</div>
+        <p class="avocat-desc">Titulaire d’une Maîtrise en Droit option Droit des affaires obtenue à l’Université de Cocody (Abidjan) obtenu à l’Université Felix Houphouët Boigny (Abidjan) et d’un diplôme d’arbitre professionnel obtenu au CERFOPMAN.</p>
+        <a href="squad.html#touame" class="avocat-link">Voir le profil →</a>
+      </div>
+    </div>
+    <div class="avocat-card reveal">
+      <div class="avocat-photo" style="background-image: url(imagehero1.jpg); background-size:cover; background-position: center 20%;">
+        <div class="avocat-photo-overlay"></div>
+        <div class="avocat-initial">S</div>
+      </div>
+      <div class="avocat-bar"></div>
+      <div class="avocat-info">
+        <div class="avocat-name">Maître Sophie Laurent</div>
+        <div class="avocat-role">Associée — Droit fiscal international</div>
+        <p class="avocat-desc">Docteure en droit fiscal de Paris II, Maître Laurent intervient pour des multinationales dans leurs structurations transfrontalières complexes.</p>
+        <a href="#" class="avocat-link">Voir le profil →</a>
+      </div>
+    </div>
+    <div class="avocat-card reveal">
+      <div class="avocat-photo" style="background: linear-gradient(135deg, #1a3068 0%, #0a1e4a 100%);">
+        <div class="avocat-initial">K</div>
+      </div>
+      <div class="avocat-bar"></div>
+      <div class="avocat-info">
+        <div class="avocat-name">Maître Karim Dubois</div>
+        <div class="avocat-role">Associé — Droit pénal des affaires</div>
+        <p class="avocat-desc">Ancien juge d'instruction financier, Maître Dubois offre une connaissance unique des rouages de la justice économique et financière.</p>
+        <a href="#" class="avocat-link">Voir le profil →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TÉMOIGNAGES -->
+<section id="temoignages">
+  <div class="temoignages-bg">
+    <div class="section-header reveal" style="margin-bottom: 70px;">
+      <p class="section-label" style="color:var(--or);">Références clients</p>
+      <h2 class="section-title" style="color:var(--blanc);">Ce que disent<br><em>nos clients</em></h2>
+    </div>
+
+    <div class="slider-container reveal">
+      <div class="temoignages-track" id="track">
+        <div class="temoignage">
+          <div class="stars">★★★★★</div>
+          <p class="temoignage-text">« Moreau & Associés nous a accompagnés lors d'une acquisition stratégique majeure. Leur réactivité, leur rigueur et leur sens des affaires ont été déterminants pour le succès de l'opération. »</p>
+          <div class="temoignage-author">
+            <div class="author-avatar">PD</div>
+            <div>
+              <div class="author-name">Pierre Durand</div>
+              <div class="author-title">Directeur Général — Groupe Industriel</div>
+            </div>
+          </div>
+        </div>
+        <div class="temoignage">
+          <div class="stars">★★★★★</div>
+          <p class="temoignage-text">« Un cabinet qui allie la maîtrise technique pointue à une compréhension fine de nos enjeux business. Un partenaire stratégique indispensable depuis dix ans. »</p>
+          <div class="temoignage-author">
+            <div class="author-avatar">MC</div>
+            <div>
+              <div class="author-name">Marie Céleste</div>
+              <div class="author-title">CFO — Société de gestion</div>
+            </div>
+          </div>
+        </div>
+        <div class="temoignage">
+          <div class="stars">★★★★★</div>
+          <p class="temoignage-text">« La qualité de l'accompagnement fiscal dans nos opérations d'optimisation m'a impressionné. Des conseils toujours pertinents, délivrés avec une grande pédagogie. »</p>
+          <div class="temoignage-author">
+            <div class="author-avatar">TR</div>
+            <div>
+              <div class="author-name">Thomas Renard</div>
+              <div class="author-title">Entrepreneur &amp; Investisseur</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-nav">
+        <button class="nav-arrow prev" id="prevBtn">←</button>
+        <button class="nav-arrow next" id="nextBtn">→</button>
+      </div>
+    </div>
+
+    <div class="slider-dots" id="dotsContainer"></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     SECTION PARTENAIRES — Coller dans index.html avant le <footer>
+     ══════════════════════════════════════════════════════════════ -->
+
+<section id="partenaires">
+  <div class="partenaires-inner">
+
+    <!-- En-tête -->
+    <div class="partenaires-header reveal">
+      <span class="section-tag">Ils nous font confiance</span>
+      <h2 class="section-title partenaires-title">Nos <em>Partenaires</em></h2>
+    </div>
+
+    <!-- Bande défilante -->
+    <div class="sponsors-belt" aria-label="Carrousel des partenaires">
+
+      <div class="sponsors-fade sponsors-fade--left" aria-hidden="true"></div>
+
+      <!-- Track (liste doublée pour le loop CSS infini) -->
+      <div class="sponsors-track" id="sponsorsTrack">
+
+        <!-- ── SÉRIE A — remplacez href et src par vos vraies valeurs ── -->
+        <a href="https://example.com" class="sponsor-item" aria-label="Partenaire 1" target="_blank" rel="noopener noreferrer">
+          <img src="https://placehold.co/180x64/ffffff/041f56?text=PARTENAIRE+1&font=playfair-display" alt="Partenaire 1">
+        </a>
+        <a href="https://example.com" class="sponsor-item" aria-label="Partenaire 2" target="_blank" rel="noopener noreferrer">
+          <img src="https://placehold.co/180x64/ffffff/041f56?text=PARTENAIRE+2&font=playfair-display" alt="Partenaire 2">
+        </a>
+        <a href="https://example.com" class="sponsor-item" aria-label="Partenaire 3" target="_blank" rel="noopener noreferrer">
+          <img src="https://placehold.co/180x64/ffffff/041f56?text=PARTENAIRE+3&font=playfair-display" alt="Partenaire 3">
+        </a>
+        <a href="https://example.com" class="sponsor-item" aria-label="Partenaire 4" target="_blank" rel="noopener noreferrer">
+          <img src="https://placehold.co/180x64/ffffff/041f56?text=PARTENAIRE+4&font=playfair-display" alt="Partenaire 4">
+        </a>
+        <a href="https://example.com" class="sponsor-item" aria-label="Partenaire 5" target="_blank" rel="noopener noreferrer">
+          <img src="https://placehold.co/180x64/ffffff/041f56?text=PARTENAIRE+5&font=playfair-display" alt="Partenaire 5">
+        </a>
+        <a href="https://example.com" class="sponsor-item" aria-label="Partenaire 6" target="_blank" rel="noopener noreferrer">
+          <img src="https://placehold.co/180x64/ffffff/041f56?text=PARTENAIRE+6&font=playfair-display" alt="Partenaire 6">
+        </a>
+
+        <!-- ── SÉRIE B — clone identique pour le loop infini ── -->
+        <a href="https://example.com" class="sponsor-item" aria-hidden="true" tabindex="-1" target="_blank" rel="noopener noreferrer">
+          <img src="https://placehold.co/180x64/ffffff/041f56?text=PARTENAIRE+1&font=playfair-display" alt="">
+        </a>
+        <a href="https://example.com" class="sponsor-item" aria-hidden="true" tabindex="-1" target="_blank" rel="noopener noreferrer">
+          <img src="https://placehold.co/180x64/ffffff/041f56?text=PARTENAIRE+2&font=playfair-display" alt="">
+        </a>
+        <a href="https://example.com" class="sponsor-item" aria-hidden="true" tabindex="-1" target="_blank" rel="noopener noreferrer">
+          <img src="https://placehold.co/180x64/ffffff/041f56?text=PARTENAIRE+3&font=playfair-display" alt="">
+        </a>
+        <a href="https://example.com" class="sponsor-item" aria-hidden="true" tabindex="-1" target="_blank" rel="noopener noreferrer">
+          <img src="https://placehold.co/180x64/ffffff/041f56?text=PARTENAIRE+4&font=playfair-display" alt="">
+        </a>
+        <a href="https://example.com" class="sponsor-item" aria-hidden="true" tabindex="-1" target="_blank" rel="noopener noreferrer">
+          <img src="https://placehold.co/180x64/ffffff/041f56?text=PARTENAIRE+5&font=playfair-display" alt="">
+        </a>
+        <a href="https://example.com" class="sponsor-item" aria-hidden="true" tabindex="-1" target="_blank" rel="noopener noreferrer">
+          <img src="https://placehold.co/180x64/ffffff/041f56?text=PARTENAIRE+6&font=playfair-display" alt="">
+        </a>
+
+      </div><!-- /sponsors-track -->
+
+      <div class="sponsors-fade sponsors-fade--right" aria-hidden="true"></div>
+
+    </div><!-- /sponsors-belt -->
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-info">
+    <p class="section-label">Contact</p>
+    <h2 class="section-title">Parlons de<br><em>votre situation</em></h2>
+    <p class="contact-desc">Chaque dossier est unique. Contactez-nous pour une première consultation confidentielle et sans engagement.</p>
+    <div class="contact-detail">
+      <div class="contact-icon">
+        <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" stroke="currentColor" stroke-width="1.5"/></svg>
+      </div>
+      <div>
+        <div class="contact-label">Adresse</div>
+        <div class="contact-value">(Akouédo Palmeraie) 32 Rue Ahoundjuè, Lot 32, Porte R1-RDC</div>
+      </div>
+    </div>
+    <div class="contact-detail">
+      <div class="contact-icon">
+        <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" stroke="currentColor" stroke-width="1.5"/></svg>
+      </div>
+      <div>
+        <div class="contact-label">Téléphone</div>
+        <div class="contact-value">+225 05 01 77 38 38 <br> +225 07 11 49 05 94</div>
+      </div>
+    </div>
+    <div class="contact-detail">
+      <div class="contact-icon">
+        <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="1.5"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="1.5"/></svg>
+      </div>
+      <div>
+        <div class="contact-label">Email</div>
+        <div class="contact-value">conseilsdst@gmail.com</div>
+      </div>
+    </div>
+    <div class="contact-detail">
+      <div class="contact-icon">
+        <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><polyline points="12,7 12,12 15,15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
+      <div>
+        <div class="contact-label">Horaires</div>
+        <div class="contact-value">Lundi – Vendredi, 9h – 19h</div>
+      </div>
+    </div>
+  </div>
+ <form class="contact-form" action="https://formspree.io/f/votre_cle_ici" method="POST">
+  <p class="section-label" style="color:var(--or);">Demande de consultation</p>
+  
+  <div class="form-row">
+    <div class="form-group">
+      <label for="prenom">Prénom</label>
+      <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required>
+    </div>
+    <div class="form-group">
+      <label for="nom">Nom</label>
+      <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+    </div>
+    <div class="form-group">
+      <label for="tel">Téléphone</label>
+      <input type="tel" id="tel" name="telephone" placeholder="Votre téléphone">
+    </div>
+  </div>
+
+  <div class="form-full">
+    <label for="domaine">Domaine juridique</label>
+    <div class="select-wrapper">
+      <select id="domaine" name="domaine_juridique">
+        <option value="">Sélectionnez un domaine</option>
+        <option value="Droit des affaires">Droit des affaires</option>
+        <option value="Droit des Obligations">Droit des Obligations</option>
+        <option value="Droit du Travail">Droit du Travail</option>
+        <option value="Droit Fiscal">Droit Fiscal</option>
+        <option value="Droit Social">Droit Social</option>
+        <option value="Droit de la famille">Droit de la famille</option>
+        <option value="Propriété Intellectuelle">Propriété Intellectuelle</option>
+        <option value="Droit Immobilier">Droit Immobilier</option>
+        <option value="Autre">Autre</option>
+      </select>
+      <div class="select-arrow">▾</div>
+    </div>
+  </div>
+
+  <div class="form-full">
+    <label for="message">Votre situation</label>
+    <textarea id="message" name="message" placeholder="Décrivez brièvement votre situation..." required></textarea>
+  </div>
+
+  <button type="submit" class="form-submit">
+    <span>Envoyer ma demande</span>
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  
+  <p class="form-note">Toutes vos informations sont traitées en toute confidentialité, dans le respect du secret professionnel.</p>
+</form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img src="img/logoblanc.png" alt="DST Conseils" class="footer-logo">
+      <p class="footer-tagline">L'excellence juridique au service de vos ambitions.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-col">
+        <div class="footer-col-title">Navigation</div>
+        <a href="#domaines">Expertise</a>
+        <a href="#about">Cabinet</a>
+        <a href="squad.html">Équipe</a>
+        <a href="#temoignages">Références</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Domaines</div>
+        <a href="#domaines">Droit des affaires</a>
+        <a href="#domaines">Droit fiscal</a>
+        <a href="#domaines">Droit social</a>
+        <a href="#domaines">Droit pénal</a>
+        <a href="#domaines">Propriété intellectuelle</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Contact</div>
+        <a href="https://maps.app.goo.gl/xQ7EXf2CSvJg3mYC9">Abidjan, Côte d'Ivoire</a>
+        <a href="https://maps.app.goo.gl/xQ7EXf2CSvJg3mYC9">(Akouédo Palmeraie) 32 Rue Ahoundjuè, Lot 32, Porte R1-RDC</a>
+        <a href="tel:+2250501773838">+225 05 01 77 38 38</a>
+        <a href="tel:+2250711490594">+225 07 11 49 05 94</a>
+        <a href="mailto:conseilsdst@gmail.com">conseilsdst@gmail.com</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 DST Conseils — Tous droits réservés — Abidjan, Côte d'Ivoire </div>
+    <div class="footer-links">
+      <a href="Mentions légales.html">Mentions légales</a>
+      <a href="confidentialité.html">Confidentialité</a>
+      <a href="CGU.html">CGU</a>
+    </div>
+    <div class="footer-credit">Developed by HUEHA</div>
+  </div>
+</footer>
+
+<script src="moder.js"></script>
+</body>
+</html>

@@ -1,0 +1,321 @@
+*/* ══════════════════════════════════════════
+     OVERRIDES — conflits avec mod.css
+     • nav { flex; space-between } cassait le sommaire
+     • section { padding:120px 60px } écrasait le hero
+  ══════════════════════════════════════════ */
+
+/* ══ LOADER ══ */
+.loader {
+  position: fixed; inset: 0;
+  background: var(--navy-deep);
+  z-index: 10000;
+  display: flex; align-items: center; justify-content: center;
+  transition: opacity 0.8s ease, visibility 0.8s;
+}
+.loader.hidden { opacity: 0; visibility: hidden; }
+.loader-inner { text-align: center; }
+.loader-logo {
+  width: 200px; opacity: 0;
+  animation: fadeUp 0.6s 0.3s forwards;
+}
+.loader-bar {
+  width: 200px; height: 1px;
+  background: rgba(200,169,110,0.2);
+  margin: 30px auto 0;
+  overflow: hidden;
+  opacity: 0; animation: fadeUp 0.6s 0.5s forwards;
+}
+.loader-fill {
+  height: 100%;
+  background: var(--or);
+  width: 0;
+  animation: loadFill 1.5s 0.8s ease forwards;
+}
+@keyframes loadFill { to { width: 100%; } }
+
+/* ══ ANIMATIONS ══ */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideDown {
+  from { height: 0; }
+  to { height: 100%; }
+}
+@keyframes counterScroll {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-hero {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.9s var(--d, 0s) forwards;
+}
+
+
+  section.ml-hero {
+    padding: 160px 6vw 80px !important;
+    display: block !important;
+    min-height: unset !important;
+    flex-direction: unset !important;
+    justify-content: unset !important;
+  }
+
+  /* Sommaire : on utilise <div> pas <nav> mais on blindé quand même */
+  div.ml-toc {
+    display: block !important;
+    flex-direction: unset !important;
+    justify-content: unset !important;
+    align-items: unset !important;
+  }
+  div.ml-toc ol {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    list-style: none !important;
+    counter-reset: toc-counter !important;
+    gap: 10px !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  div.ml-toc ol li {
+    display: flex !important;
+    align-items: baseline !important;
+    justify-content: flex-start !important;
+    gap: 12px !important;
+    width: 100% !important;
+    counter-increment: toc-counter !important;
+  }
+  div.ml-toc ol li::before {
+    content: counter(toc-counter, decimal-leading-zero) !important;
+    font-family: 'Jost', sans-serif !important;
+    font-size: 10px !important;
+    font-weight: 300 !important;
+    color: var(--or) !important;
+    letter-spacing: 0.1em !important;
+    flex-shrink: 0 !important;
+    background: none !important;
+    width: auto !important; height: auto !important;
+    border-radius: 0 !important;
+    position: static !important;
+  }
+
+  /* ── HERO ── */
+  .ml-hero {
+    background: var(--navy-deep);
+    position: relative;
+    overflow: hidden;
+  }
+  .ml-hero::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 60% 80% at 80% 50%, rgba(200,169,110,0.08) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .ml-hero-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 860px;
+  }
+  .ml-hero-tag {
+    display: flex !important;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 28px;
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--or);
+    opacity: 0;
+    animation: fadeUp 0.6s 0.3s forwards;
+  }
+  .ml-hero-tag::before {
+    content: '' !important;
+    display: block !important;
+    width: 36px !important; height: 1px !important;
+    background: var(--or) !important;
+    flex-shrink: 0 !important;
+    border-radius: 0 !important;
+    position: static !important;
+  }
+  .ml-hero h1 {
+    font-family: 'Cormorant Infant', serif;
+    font-size: clamp(38px, 6vw, 72px);
+    font-weight: 300;
+    color: var(--blanc);
+    line-height: 1.1;
+    opacity: 0;
+    animation: fadeUp 0.7s 0.45s forwards;
+  }
+  .ml-hero h1 em { font-style: italic; color: var(--or); }
+  .ml-hero-sub {
+    font-family: 'Jost', sans-serif;
+    font-weight: 300; font-size: 14px;
+    color: rgba(250,249,246,0.55);
+    margin-top: 22px; letter-spacing: 0.02em;
+    opacity: 0; animation: fadeUp 0.7s 0.6s forwards;
+  }
+  .ml-hero-line {
+    position: absolute; bottom: 0; left: 0; right: 0; height: 1px;
+    background: linear-gradient(to right, transparent, rgba(200,169,110,0.3), transparent);
+  }
+
+  /* ── LAYOUT PRINCIPAL ── */
+  .ml-body {
+    background: var(--blanc);
+    padding: 80px 6vw 100px;
+  }
+  .ml-container { max-width: 860px; margin: 0 auto; }
+
+  /* ── SOMMAIRE ── */
+  div.ml-toc {
+    background: var(--creme);
+    border-left: 3px solid var(--or);
+    border-radius: 0 8px 8px 0;
+    padding: 32px 36px;
+    margin-bottom: 64px;
+  }
+  .ml-toc-title {
+    display: block !important;
+    font-family: 'Jost', sans-serif;
+    font-size: 10px; font-weight: 400;
+    letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--or-sombre); margin-bottom: 18px;
+  }
+  div.ml-toc ol li a {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px; color: var(--navy);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  div.ml-toc ol li a:hover { color: var(--or-sombre); border-color: var(--or-sombre); }
+
+  /* ── SECTIONS ── */
+  .ml-section {
+    margin-bottom: 56px;
+    padding: 0 0 56px 0 !important;
+    border-bottom: 1px solid var(--creme-sombre);
+    display: block !important;
+  }
+  .ml-section:last-child { border-bottom: none; }
+  .ml-section-header {
+    display: flex; align-items: center; gap: 16px; margin-bottom: 28px;
+  }
+  .ml-section-num {
+    font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 300;
+    letter-spacing: 0.2em; color: var(--or); flex-shrink: 0;
+  }
+  .ml-section h2 {
+    font-family: 'Cormorant Infant', serif;
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: 400; color: var(--navy); line-height: 1.2;
+  }
+  .ml-section h2 em { font-style: italic; color: var(--or-sombre); }
+  .ml-section p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px; line-height: 1.8; color: #2c3e6b; margin-bottom: 16px;
+  }
+  .ml-section p:last-child { margin-bottom: 0; }
+  .ml-section strong { font-weight: 600; color: var(--navy); }
+
+  /* ── BLOC INFO ── */
+  .ml-info-block {
+    background: var(--navy-deep); border-radius: 4px;
+    padding: 28px 32px; margin: 24px 0;
+    display: grid !important; gap: 14px;
+  }
+  .ml-info-row {
+    display: grid !important;
+    grid-template-columns: 160px 1fr; gap: 12px;
+    border-bottom: 1px solid rgba(200,169,110,0.12);
+    padding-bottom: 14px; align-items: baseline;
+  }
+  .ml-info-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .ml-info-label {
+    font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 300;
+    letter-spacing: 0.2em; text-transform: uppercase; color: var(--or);
+  }
+  .ml-info-value {
+    font-family: 'Cormorant Garamond', serif; font-size: 16px;
+    color: var(--blanc); line-height: 1.6;
+  }
+  .ml-info-value a {
+    color: var(--or-clair); text-decoration: none;
+    border-bottom: 1px solid rgba(200,169,110,0.3); transition: border-color 0.2s;
+  }
+  .ml-info-value a:hover { border-color: var(--or); }
+
+  /* ── NOTE ── */
+  .ml-note {
+    border-left: 2px solid var(--or); padding: 18px 24px;
+    background: rgba(200,169,110,0.06); border-radius: 0 4px 4px 0; margin: 20px 0;
+  }
+  .ml-note p { font-size: 15px; color: var(--gris); font-style: italic; }
+
+  /* ── DATE ── */
+  .ml-update {
+    text-align: center; padding: 40px 0 0;
+    font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 300;
+    letter-spacing: 0.2em; text-transform: uppercase; color: var(--gris-clair);
+    display: flex !important; align-items: center; justify-content: center; gap: 16px;
+  }
+  .ml-update::before, .ml-update::after {
+    content: '' !important; display: block !important;
+    width: 40px !important; height: 1px !important;
+    background: var(--creme-sombre) !important;
+    border-radius: 0 !important; position: static !important;
+  }
+
+  /* ── RETOUR ── */
+  .ml-back {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 300;
+    letter-spacing: 0.2em; text-transform: uppercase; color: var(--or-sombre);
+    text-decoration: none; margin-top: 52px;
+    border-bottom: 1px solid transparent; transition: border-color 0.2s, color 0.2s;
+  }
+  .ml-back:hover { color: var(--navy); border-color: var(--navy); }
+  .ml-back::before, .ml-back::after { display: none !important; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 640px) {
+    section.ml-hero { padding: 130px 5vw 60px !important; }
+    .ml-body { padding: 56px 5vw 72px; }
+    .ml-info-row { grid-template-columns: 1fr !important; gap: 4px; }
+    div.ml-toc { padding: 24px 20px; }
+  }
+
+  /* ── NAV : retour au site toujours visible, hamburger absent ── */
+  #navbar .hamburger,
+  .hamburger { display: none !important; }
+
+  @media (max-width: 768px) {
+    #navbar .nav-cta {
+      display: inline-flex !important;
+    }
+  }

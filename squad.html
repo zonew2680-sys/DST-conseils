@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notre Équipe — DST Conseils</title>
+<link rel="stylesheet" href="mod.css">
+<link rel="shortcut icon" href="img/logobleu.png" type="image/x-icon">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="squadcss.css">
+</head>
+<body>
+
+<!-- Curseur custom -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- LOADING SCREEN -->
+<div class="loader" id="loader">
+  <div class="loader-inner">
+    <img src="img/logo.png" alt="DST Conseils" class="loader-logo">
+    <div class="loader-bar"><div class="loader-fill"></div></div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="index.html" class="logo">
+    <img class="logo-default" src="img/logo.png" alt="DST Conseils">
+    <img class="logo-scrolled" src="img/logobleublanc.png" alt="DST Conseils">
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#domaines">Expertise</a></li>
+    <li><a href="index.html#about">Cabinet</a></li>
+    <li><a href="equipe.html" style="color:var(--or)">Équipe</a></li>
+    <li><a href="index.html#temoignages">Références</a></li>
+  </ul>
+  <a href="index.html#contact" class="nav-cta">Consultation</a>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu" style="display:none">
+  <div class="mobile-menu-header">
+    <img src="img/logoblanc.png" alt="DST Conseils" class="mobile-logo">
+    <button class="mobile-menu-close" id="mobileClose" aria-label="Fermer">&#x2715;</button>
+  </div>
+  <nav class="mobile-nav">
+    <ul>
+      <li><a href="index.html#domaines" class="mobile-link"><span class="mobile-num">01</span>Expertise</a></li>
+      <li><a href="index.html#about" class="mobile-link"><span class="mobile-num">02</span>Cabinet</a></li>
+      <li><a href="equipe.html" class="mobile-link"><span class="mobile-num">03</span>Équipe</a></li>
+      <li><a href="index.html#temoignages" class="mobile-link"><span class="mobile-num">04</span>Références</a></li>
+    </ul>
+    <a href="index.html#contact" class="mobile-cta">Demander une consultation</a>
+  </nav>
+  <div class="mobile-footer-info">
+    <span>+225 05 01 77 38 38 <br> +225 07 11 49 05 94</span>
+    <span>contact@dst-conseils.com</span>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════
+     HERO PAGE ÉQUIPE
+════════════════════════════════════════ -->
+<section class="equipe-hero">
+  <div class="equipe-hero-bg"></div>
+  <div class="equipe-hero-overlay"></div>
+  <div class="equipe-hero-lines"></div>
+  <div class="equipe-hero-num">3</div>
+
+  <!-- Breadcrumb -->
+  <div class="equipe-breadcrumb">
+    <a href="index.html">Accueil</a>
+    <span>—</span>
+    <span>Notre Équipe</span>
+  </div>
+
+  <div class="equipe-hero-content">
+    <div class="equipe-hero-tag">
+      <span class="tag-line"></span>
+      <span>DST Conseils — Abidjan, Côte d'Ivoire</span>
+    </div>
+    <h1 class="equipe-hero-title">
+      Notre<br>
+      <em>Équipe</em>
+    </h1>
+    <p class="equipe-hero-desc">
+      Des juristes de haut niveau, unis par l'exigence de l'excellence et la passion du droit — à votre service pour chaque enjeu, chaque défi.
+    </p>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     NAVIGATION RAPIDE MEMBRES
+════════════════════════════════════════ -->
+<div class="membres-nav">
+  <div class="membres-nav-inner">
+    <a href="#touame" class="membre-nav-item">
+      <div class="membre-nav-avatar">
+        <img src="img/Maître touame.jpg" alt="Maître TOUAME" onerror="this.style.display='none'; this.parentElement.textContent='T'">
+      </div>
+      <div>
+        <div class="membre-nav-name">Maître TOUAME</div>
+        <div class="membre-nav-role">Fondateur</div>
+      </div>
+    </a>
+    <a href="#laurent" class="membre-nav-item">
+      <div class="membre-nav-avatar" style="font-family:'Cormorant Infant',serif;font-size:1rem;color:var(--navy);display:flex;align-items:center;justify-content:center;">S</div>
+      <div>
+        <div class="membre-nav-name">Maître Laurent</div>
+        <div class="membre-nav-role">Associée</div>
+      </div>
+    </a>
+    <a href="#dubois" class="membre-nav-item">
+      <div class="membre-nav-avatar" style="font-family:'Cormorant Infant',serif;font-size:1rem;color:var(--navy);display:flex;align-items:center;justify-content:center;">K</div>
+      <div>
+        <div class="membre-nav-name">Maître Dubois</div>
+        <div class="membre-nav-role">Associé</div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════
+     MEMBRE 01 — MAÎTRE STÉPHANE D. TOUAME
+════════════════════════════════════════ -->
+<article class="membre-section reveal" id="touame">
+
+  <!-- Portrait -->
+  <div class="membre-portrait">
+    <img src="img/Maître touame.jpg" alt="Maître Stéphane D. TOUAME"
+         onerror="this.style.display='none'">
+    <div class="membre-initial-wrap" style="display:none" id="touame-fallback">
+      <span class="membre-initial-letter">T</span>
+    </div>
+    <div class="membre-portrait-overlay"></div>
+    <div class="membre-num-badge">01</div>
+    <div class="membre-signature">
+      <div class="membre-signature-name">Stéphane D.<br>TOUAME</div>
+      <div class="membre-signature-line"></div>
+    </div>
+  </div>
+
+  <!-- Contenu -->
+  <div class="membre-content">
+    <div class="membre-watermark">T</div>
+
+    <p class="membre-label">Fondateur &amp; Dirigeant</p>
+
+    <h2 class="membre-name">
+      Maître Stéphane<br>
+      <em>D. TOUAME</em>
+    </h2>
+    <p class="membre-role">Fondateur — Arbitre Professionnel Diplômé</p>
+
+    <div class="membre-divider">
+      <div class="membre-divider-line"></div>
+      <div class="membre-divider-diamond"></div>
+      <div class="membre-divider-line-long"></div>
+    </div>
+
+    <p class="membre-bio">
+      Juriste d'excellence et bâtisseur visionnaire, Maître Stéphane D. TOUAME a fondé DST Conseils avec une conviction profonde : le conseil juridique doit être à la fois rigoureux, accessible et stratégique. Depuis plus de dix ans, il s'impose comme une référence incontournable du paysage juridique ivoirien.
+    </p>
+    <p class="membre-bio">
+      Fort d'une double formation en droit des affaires et en arbitrage professionnel, il accompagne avec la même exigence les PME en pleine croissance, les groupes internationaux et les entrepreneurs dans leurs opérations les plus sensibles.
+    </p>
+
+    <div class="membre-formation">
+      <div class="membre-formation-title">Formation &amp; Certifications</div>
+      <div class="membre-formation-item">Maîtrise en Droit — option Droit des Affaires, Université Félix Houphouët-Boigny, Abidjan</div>
+      <div class="membre-formation-item">Diplôme d'Arbitre Professionnel — CERFOPMAN</div>
+      <div class="membre-formation-item">Fondateur de DST Conseils — plus de 10 ans d'exercice</div>
+    </div>
+
+    <div class="membre-specialites">
+      <span class="membre-tag">Droit des Affaires</span>
+      <span class="membre-tag">Arbitrage</span>
+      <span class="membre-tag">Fusions &amp; Acquisitions</span>
+      <span class="membre-tag">Droit Commercial</span>
+      <span class="membre-tag">Restructuration</span>
+      <span class="membre-tag">Contrats Internationaux</span>
+    </div>
+
+    <div class="membre-actions">
+      <a href="index.html#contact" class="membre-cta">
+        <span>Prendre rendez-vous</span>
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <a href="mailto:contact@dst-conseils.com" class="membre-link">Écrire un e-mail</a>
+    </div>
+  </div>
+</article>
+
+<!-- Citation 01 -->
+<div class="membre-quote-section reveal">
+  <p class="membre-quote-text">
+    « Le droit est une science vivante — Du coup opter pour cette profession permettra de vivre sa passion et d'en assumer sa pérénité. »
+  </p>
+  <p class="membre-quote-author">— Maître Stéphane D. TOUAME, Fondateur</p>
+</div>
+
+<div class="membre-separator"></div>
+
+<!-- ════════════════════════════════════════
+     MEMBRE 02 — MAÎTRE SOPHIE LAURENT
+════════════════════════════════════════ -->
+<article class="membre-section reveal" id="laurent">
+
+  <!-- Portrait -->
+  <div class="membre-portrait">
+    <div class="membre-initial-wrap">
+      <span class="membre-initial-letter">S</span>
+    </div>
+    <div class="membre-portrait-overlay"></div>
+    <div class="membre-num-badge">02</div>
+    <div class="membre-signature">
+      <div class="membre-signature-name">Sophie<br>LAURENT</div>
+      <div class="membre-signature-line"></div>
+    </div>
+  </div>
+
+  <!-- Contenu -->
+  <div class="membre-content">
+    <div class="membre-watermark">S</div>
+
+    <p class="membre-label">Associée Senior</p>
+
+    <h2 class="membre-name">
+      Maître Sophie<br>
+      <em>Laurent</em>
+    </h2>
+    <p class="membre-role">Associée — Droit Fiscal International</p>
+
+    <div class="membre-divider">
+      <div class="membre-divider-line"></div>
+      <div class="membre-divider-diamond"></div>
+      <div class="membre-divider-line-long"></div>
+    </div>
+
+    <p class="membre-bio">
+      Docteure en droit fiscal international, Maître Laurent s'est imposée comme l'une des rares spécialistes en Côte d'Ivoire maîtrisant les mécanismes de la fiscalité transfrontalière, des conventions de double imposition et des structurations patrimoniales complexes à dimension internationale.
+    </p>
+    <p class="membre-bio">
+      Elle intervient au quotidien pour des multinationales, des fonds d'investissement et des groupes familiaux dans leurs stratégies d'optimisation fiscale, avec une approche conjuguant sécurité juridique et pragmatisme économique.
+    </p>
+
+    <div class="membre-formation">
+      <div class="membre-formation-title">Formation &amp; Certifications</div>
+      <div class="membre-formation-item">Doctorat en Droit Fiscal International — Université Paris II Panthéon-Assas</div>
+      <div class="membre-formation-item">Master 2 Droit Fiscal — Spécialisation Fiscalité Internationale</div>
+      <div class="membre-formation-item">Certification CAPA — Barreau de Paris</div>
+    </div>
+
+    <div class="membre-specialites">
+      <span class="membre-tag">Fiscalité Internationale</span>
+      <span class="membre-tag">Double Imposition</span>
+      <span class="membre-tag">Optimisation Fiscale</span>
+      <span class="membre-tag">TVA</span>
+      <span class="membre-tag">Contrôles Fiscaux</span>
+      <span class="membre-tag">Investissements Étrangers</span>
+    </div>
+
+    <div class="membre-actions">
+      <a href="index.html#contact" class="membre-cta">
+        <span>Prendre rendez-vous</span>
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <a href="mailto:contact@dst-conseils.com" class="membre-link">Écrire un e-mail</a>
+    </div>
+  </div>
+</article>
+
+<!-- Citation 02 -->
+<div class="membre-quote-section reveal">
+  <p class="membre-quote-text">
+    « La fiscalité est une langue que peu comprennent mais que tout le monde parle. Notre rôle est d'en faire un atout, jamais une contrainte. »
+  </p>
+  <p class="membre-quote-author">— Maître Sophie Laurent, Associée</p>
+</div>
+
+<div class="membre-separator"></div>
+
+<!-- ════════════════════════════════════════
+     MEMBRE 03 — MAÎTRE KARIM DUBOIS
+════════════════════════════════════════ -->
+<article class="membre-section reveal" id="dubois">
+
+  <!-- Portrait -->
+  <div class="membre-portrait">
+    <div class="membre-initial-wrap" style="background: linear-gradient(145deg, #1a3068 0%, #02133a 100%);">
+      <span class="membre-initial-letter">K</span>
+    </div>
+    <div class="membre-portrait-overlay"></div>
+    <div class="membre-num-badge">03</div>
+    <div class="membre-signature">
+      <div class="membre-signature-name">Karim<br>DUBOIS</div>
+      <div class="membre-signature-line"></div>
+    </div>
+  </div>
+
+  <!-- Contenu -->
+  <div class="membre-content">
+    <div class="membre-watermark">K</div>
+
+    <p class="membre-label">Associé Senior</p>
+
+    <h2 class="membre-name">
+      Maître Karim<br>
+      <em>Dubois</em>
+    </h2>
+    <p class="membre-role">Associé — Droit Pénal des Affaires</p>
+
+    <div class="membre-divider">
+      <div class="membre-divider-line"></div>
+      <div class="membre-divider-diamond"></div>
+      <div class="membre-divider-line-long"></div>
+    </div>
+
+    <p class="membre-bio">
+      Ancien juge d'instruction financier reconverti au barreau, Maître Karim Dubois bénéficie d'une connaissance de l'intérieur unique du système judiciaire — un avantage décisif pour anticiper les risques pénaux et construire des stratégies de défense d'une efficacité rare.
+    </p>
+    <p class="membre-bio">
+      Il intervient aussi bien en amont, lors des due diligences pénales et des audits de conformité, qu'en gestion de crise lors de perquisitions, mises en cause et procédures judiciaires visant dirigeants et entreprises.
+    </p>
+
+    <div class="membre-formation">
+      <div class="membre-formation-title">Formation &amp; Parcours</div>
+      <div class="membre-formation-item">Master Droit Pénal des Affaires &amp; Criminalité Financière</div>
+      <div class="membre-formation-item">Ancien Juge d'Instruction Financier — 8 ans de magistrature</div>
+      <div class="membre-formation-item">Inscription au Barreau — spécialité Droit Pénal</div>
+    </div>
+
+    <div class="membre-specialites">
+      <span class="membre-tag">Droit Pénal des Affaires</span>
+      <span class="membre-tag">Criminalité Financière</span>
+      <span class="membre-tag">Compliance</span>
+      <span class="membre-tag">Gestion de Crise</span>
+      <span class="membre-tag">Défense de Dirigeants</span>
+      <span class="membre-tag">Fraude &amp; Corruption</span>
+    </div>
+
+    <div class="membre-actions">
+      <a href="index.html#contact" class="membre-cta">
+        <span>Prendre rendez-vous</span>
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <a href="mailto:contact@dst-conseils.com" class="membre-link">Écrire un e-mail</a>
+    </div>
+  </div>
+</article>
+
+<!-- Citation 03 -->
+<div class="membre-quote-section reveal">
+  <p class="membre-quote-text">
+    « Avoir exercé comme magistrat m'a appris une chose : la meilleure défense se construit bien avant que le problème ne surgisse. »
+  </p>
+  <p class="membre-quote-author">— Maître Karim Dubois, Associé</p>
+</div>
+
+<!-- ════════════════════════════════════════
+     BANDE CTA CONTACT
+════════════════════════════════════════ -->
+<div class="equipe-contact-band reveal">
+  <div class="equipe-contact-text">
+    <h2>Parlons de<br><em>votre dossier</em></h2>
+    <p>Chaque situation est unique. Nos conseils prennent le temps d'écouter, d'analyser et de vous proposer la meilleure stratégie juridique.</p>
+  </div>
+  <a href="index.html#contact" class="equipe-contact-cta">
+    <span>Demander une consultation</span>
+    <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
+      <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img src="img/logoblanc.png" alt="DST Conseils" class="footer-logo">
+      <p class="footer-tagline">L'excellence juridique au service de vos ambitions.</p>
+    </div>
+    <div class="footer-nav">
+      <div class="footer-col">
+        <div class="footer-col-title">Navigation</div>
+        <a href="index.html#domaines">Expertise</a>
+        <a href="index.html#about">Cabinet</a>
+        <a href="equipe.html">Équipe</a>
+        <a href="index.html#temoignages">Références</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Domaines</div>
+        <a href="index.html#domaines">Droit des affaires</a>
+        <a href="index.html#domaines">Droit fiscal</a>
+        <a href="index.html#domaines">Droit social</a>
+        <a href="index.html#domaines">Droit pénal</a>
+        <a href="index.html#domaines">Propriété intellectuelle</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Contact</div>
+        <a href="https://maps.app.goo.gl/xQ7EXf2CSvJg3mYC9">Abidjan, Côte d'Ivoire</a>
+        <a href="https://maps.app.goo.gl/xQ7EXf2CSvJg3mYC9">(Akouédo Palmeraie) 32 Rue Ahoundjuè, Lot 32, Porte R1-RDC</a>
+        <a href="tel:+2250501773838">+225 05 01 77 38 38</a>
+        <a href="tel:+2250711490594">+225 07 11 49 05 94</a>
+        <a href="mailto:contact@dst-conseils.com">contact@dst-conseils.com</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 DST Conseils — Tous droits réservés</div>
+    <div class="footer-links">
+      <a href="#">Mentions légales</a>
+      <a href="#">Politique de confidentialité</a>
+    </div>
+  </div>
+</footer>
+
+<script src="moder.js"></script>
+<script src="squadjs.js"></script>
+
+</body>
+</html>
