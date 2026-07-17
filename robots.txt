@@ -3,4 +3,4 @@ Allow: /
 Disallow: /img/
 Disallow: /*.json$
 
-Sitemap: https://www.dstconseils.ci/sitemap.xml
+Sitemap: https://www.dst-conseils.com/sitemap.xml
